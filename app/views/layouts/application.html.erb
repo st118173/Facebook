@@ -11,5 +11,86 @@
 
   <body>
     <%= yield %>
+    <div class="container">
+      <% if flash[:error] %>
+          <div id="flash" class="flash-"><%#= flash[:error] %></div>
+      <% end %>
+    </div>
+
+    </div>
+
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+          <div id="flash" class="flash-<%= message_type %>"><%= message %></div>
+      <% end %>
+    </div>
+    <%= yield %>
+    </div>
+
+    <style>
+      .w3-button  {
+        margin: 0;
+        height: 150px;
+        width: 150px;
+        border-radius: 200%;
+        border: 1px orange;
+        position:fixed;
+        margin-right: auto;
+        right:0;
+        bottom:0;
+        padding:0;
+        color: white;
+        background-color: green;
+
+      }
+
+      @-moz-keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        70% {
+          opacity: 1;
+        }
+
+      }
+
+      .w3-button  {
+        -webkit-animation: blink 1s;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation: blink 1s;
+        -moz-animation-iteration-count: infinite;
+        -o-animation: blink 1s;
+        -o-animation-iteration-count: infinite;
+      }
+      #flash {
+        -webkit-animation: seconds 1.0s forwards;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-delay: 5s;
+        animation: seconds 1.0s forwards;
+        animation-iteration-count: 1;
+        animation-delay: 2.5s;
+        position: relative;
+
+      }
+      @-webkit-keyframes seconds {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          left: -9999px;
+        }
+      }
+      @keyframes seconds {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          left: -9999px;
+        }
+      }
+
+    </style>
   </body>
 </html>

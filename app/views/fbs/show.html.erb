@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @fb.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @fb.password %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @fb.firstname %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @fb.surname %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @fb.mobile %>
+</p>
+
+<p>
+  <strong>Newpassword:</strong>
+  <%= @fb.newpassword %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @fb.dob %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @fb.gender %>
+</p>
+
+<%= link_to 'Edit', edit_fb_path(@fb) %> |
+<%= link_to 'Back', fbs_path %>

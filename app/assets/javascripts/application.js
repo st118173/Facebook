@@ -15,3 +15,16 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function(){
+    $(function() {
+        $('#flash').delay(500).slideDown('normal', function() {
+            $(this).delay(2500).slideUp();
+        });
+    });
+});
+
+$(function(){
+    alertify.parent(document.body);
+});
+

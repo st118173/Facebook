@@ -343,9 +343,11 @@
                                 <div class="_5k_5">
                                   <span class="_5k_4" data-type="selectors" data-name="birthday_wrapper" id="u_0_f" aria-describedby="js_mh">
                                     <span>
-                                       <%= f.input :dob,name: '', as: :date, start_year: Date.today.year - 112,
+
+
+                                      <%= f.input_field :dob, as: :date, start_year: Date.today.year - 112,
                                                    end_year: Date.today.year,
-                                                   order: [:day,:month, :year] %>
+                                                   order: [:day,:month, :year], prompt: ["",'',''] %>
                                       <!--<select aria-label="Day" name="birthday_day" id="day" title="Day" class="_5dba">-->
                                         <!--<option value="0" selected="1">-->
                                           <!--Day-->

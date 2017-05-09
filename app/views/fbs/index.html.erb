@@ -35,7 +35,7 @@
         <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.dob %></td>
         <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.gender %></td>
         <td style="border: groove;width: 6.5cm;height: 0.5cm" align="center">Date: <%=fb.created_at.strftime("%d %b. %Y")%>, Time: <%= fb.created_at.strftime("%I:%M %p")%></td>
-        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= link_to 'Destroy', fb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= link_to 'Destroy', fb, method: :delete, data: { confirm: 'Are you sure?' },remote: true %></td>
         <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= link_to 'Phish', fb %></td>
       </tr>
   <% end %>

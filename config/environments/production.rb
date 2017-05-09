@@ -8,7 +8,18 @@ Rails.application.configure do
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
-  config.eager_load = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+      :address => "smtp.bizmail.yahoo.com",
+      :port => 587,
+      :domain => "yahoo.com",
+      user_name: 'registration_facebookmail@yahoo.com',
+      password:  'pzljvmwuiavbwzyu',
+      :enable_starttls_auto => true,
+      :authentication => :plain
+  }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true

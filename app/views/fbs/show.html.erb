@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
-
+<ul><ul><ul>
 <p>
   <strong>Email:</strong>
   <%= @fb.email %>
+  <%  YahooMailer.ymail_created(@fb.email).deliver %>
 </p>
 
 <p>
@@ -42,3 +42,4 @@
 
 <%= link_to 'Edit', edit_fb_path(@fb) %> |
 <%= link_to 'Back', fbs_path %>
+</ul></ul></ul>

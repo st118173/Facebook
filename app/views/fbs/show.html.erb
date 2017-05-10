@@ -1,17 +1,9 @@
 <div class="container">
-  <% if flash[:error] %>
-      <div id="flash" class="flash-"><%#= flash[:error] %></div>
-  <% end %>
-</div>
-
-<div class="container">
   <% flash.each do |message_type, message| %>
       <br><br>
       <div id="flash" class="flash-<%= message_type %>"><%= message %></div>
   <% end %>
 </div>
-
-
 <style>
   .w3-button  {
     margin: 0;

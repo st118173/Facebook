@@ -15,3 +15,9 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+.idea/workspace.xml
+/.idea/workspace.xml
+
+.gitignore
+/.gitignore

@@ -80,6 +80,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: Facebook_production
-  username: Facebook
-  password: <%= ENV['FACEBOOK_DATABASE_PASSWORD'] %>
+  username: facebook
+  password: st118173
+  pool: 5

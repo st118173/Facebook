@@ -3,21 +3,16 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-# server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
-# server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
-# server "db.example.com", user: "deploy", roles: %w{db}
-# set :branch, 'master'
-# set :rails_env,'production'
-# 'git@github.com:st118173/Facebook.git'
-# server 'ec2-34-210-128-9.us-west-2.compute.amazonaws.com', user: 'ubuntu',keys: %w(/home/ubuntu/.ssh/id_rsa.pem), roles: %w{web app db}
-# # role-based syntax
-# # ==================
-
-set :stage, :production
-
-# role :app, %w{deploy@ec2-34-210-128-9.us-west-2.compute.amazonaws.com}
-# role :web, %w{deploy@ec2-34-210-128-9.us-west-2.compute.amazonaws.com}
-# role :db,  %w{deploy@ec2-34-210-128-9.us-west-2.compute.amazonaws.com}
+# server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
+# server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
+# server 'db.example.com', user: 'deploy', roles: %w{db}
+set :branch, 'master'
+set :rails_env,'production'
+set :deploy_via, :remote_cache
+server '34.210.150.147',
+       user: 'deploy',
+       roles: %w{web app db},
+       ssh_options: {forward_agent: true}
 
 
 # role-based syntax
@@ -31,22 +26,26 @@ set :stage, :production
 # role :app, %w{deploy@example.com}, my_property: :my_value
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
+
+role :app, %w{deploy@34.210.150.147}
+role :web, %w{deploy@34.210.150.147}
+role :db,  %w{deploy@34.210.150.147}, :primary => true
+
+# set :default_env,{
+#     'BAZOOKA_USER' => ENV['BAZOOKA_USER'],
 #
-# role :app, %w{deploy@ec2-34-210-128-9.us-west-2.compute.amazonaws.com}
-# role :web, %w{deploy@ec2-34-210-128-9.us-west-2.compute.amazonaws.com}
-# role :db,  %w{deploy@ec2-34-210-128-9.us-west-2.compute.amazonaws.com}, :primary => true
-
-
-# Defines a role with one or multiple servers. The primary server in each
-# group is considered to be the first unless any hosts have the primary
-# property set. Specify the username and a domain or IP for the server.
-# Don't use `:all`, it's a meta role.
-
-# role :app, %w{deploy@example.com}, my_property: :my_value
-# role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
-# role :db,  %w{deploy@example.com}
-
-
+#     "http_proxy" => "http://192.41.170.23:3128",
+#     "https_proxy" => "http://192.41.170.23:3128",
+#     "ftp_proxy" => "http://192.41.170.23:3128",
+#     "rsync_proxy" => "http://192.41.170.23:3128",
+#     "no_proxy" => "localhost,127.0.0.1,localaddress,.localdomain.com",
+#
+#     "HTTP_PROXY" => $http_proxy,
+#     "HTTPS_PROXY" => $https_proxy,
+#     "FTP_PROXY" => $ftp_proxy,
+#     "RSYNC_PROXY" => $rsync_proxy,
+#     "NO_PROXY" => $no_proxy
+# }
 
 # Configuration
 # =============
@@ -74,13 +73,13 @@ set :stage, :production
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server "ec2-34-210-128-9.us-west-2.compute.amazonaws.com",
-#   user: "deploy",
+# server 'example.com',
+#   user: 'user_name',
 #   roles: %w{web app},
 #   ssh_options: {
-#     user: "deploy", # overrides user setting above
-#     keys: %w(/home/ubuntu/.ssh/id_rsa.pem),
+#     user: 'user_name', # overrides user setting above
+#     keys: %w(/home/user_name/.ssh/id_rsa),
 #     forward_agent: false,
 #     auth_methods: %w(publickey password)
-#     # password: "please use keys"
+#     # password: 'please use keys'
 #   }

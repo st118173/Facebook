@@ -4,7 +4,7 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-gem 'listen', '~> 3.0.5'
+
 group :development do
   gem 'capistrano-ssh-doctor', '~> 1.0'
 end
@@ -43,16 +43,16 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-  gem 'capistrano'
-  gem 'capistrano3-puma'
-  gem 'capistrano-rails', require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano-rvm'
+gem "capistrano-db-tasks", require: false
+group :development do
+  gem 'capistrano', '~> 3.6.1'
+  gem 'capistrano-rbenv', '~> 2.0.4'
+  gem 'capistrano-rbenv-install', '~> 1.2.0'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-passenger'
+  gem 'capistrano-secrets-yml'
 end
-
+gem 'capistrano-rails-collection'
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'

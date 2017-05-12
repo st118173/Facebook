@@ -36,7 +36,6 @@ set :application, 'Facebook'
 set :repo_url, 'git@github.com:st118173/Facebook.git' # Edit this to match your repository
 set :branch, :master
 set :deploy_to, '/home/deploy/Facebook'
-set :scm, :git
 set :repository, 'git@github.com:st118173/Facebook.git'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}

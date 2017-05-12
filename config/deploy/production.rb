@@ -9,7 +9,7 @@
 set :branch, 'master'
 set :rails_env,'production'
 
-server 'ec2-34-210-128-9.us-west-2.compute.amazonaws.com', user: 'arun',keys: %w(/home/arun/.ssh/id_rsa.pem), roles: %w{web app db}
+server 'ec2-34-210-128-9.us-west-2.compute.amazonaws.com', user: 'ubuntu',keys: %w(/home/ubuntu/.ssh/id_rsa.pem), roles: %w{web app db}
 # role-based syntax
 # ==================
 

@@ -82,7 +82,7 @@ production:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: Facebook_production
-  username: facebook
+  database: facebook_production
+  #username: facebook
   #password: st118173
   pool: 5

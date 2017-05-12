@@ -8,12 +8,8 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 set :branch, 'master'
 set :rails_env,'production'
-set :deploy_via, :remote_cache
 
-
-role :app, %w{deploy@34.210.128.9}
-role :web, %w{deploy@34.210.128.9}
-role :db,  %w{deploy@34.210.128.9}, :primary => true
+server 'ec2-34-210-128-9.us-west-2.compute.amazonaws.com', user: 'deploy', roles: %w{web app db}
 # role-based syntax
 # ==================
 

@@ -50,12 +50,6 @@ set :stages,['production']
 set :default_stage,'production'
 set :user, 'deploy'
 set :branch,'master'
-namespace :deploy do
-  desc "reload the database with seed data"
-  task :seed do
-    run "cd #{current_path}; rake db:seed RAILS_ENV=#{rails_env}"
-  end
-end
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"

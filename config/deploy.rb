@@ -32,7 +32,7 @@ lock "3.8.1"
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-
+set :stage, "production"
 set :application, 'Facebook'
 set :repo_url, 'git@github.com:st118173/Facebook.git' # Edit this to match your repository
 set :branch, :master

@@ -9,7 +9,7 @@
 set :branch, 'master'
 set :rails_env,'production'
 set :deploy_via, :remote_cache
-server 'ec2-34-210-128-9.us-west-2.compute.amazonaws.com',
+server '34.210.128.9',
        user: 'deploy',
        roles: %w{web app db}
 

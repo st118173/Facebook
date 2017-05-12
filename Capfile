@@ -23,15 +23,13 @@ require 'capistrano/rails/collection'
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
 # require 'capistrano/passenger'
-require 'capistrano/rbenv'
-require 'capistrano/rbenv_install'
-require 'capistrano/bundler'
-require 'capistrano/secrets_yml'
-require 'capistrano/rails/assets'
-require 'capistrano/rails/migrations'
-require 'capistrano/passenger'
+require 'capistrano/setup'
+require 'capistrano/deploy'
 
+require 'capistrano/rails'
+require 'capistrano/bundler'
+require 'capistrano/rvm'
+require 'capistrano/puma'
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
-require "capistrano/scm/git"
-install_plugin Capistrano::SCM::Git
+

@@ -45,13 +45,13 @@ gem 'jbuilder', '~> 2.5'
 
 gem "capistrano-db-tasks", require: false
 group :development do
-  gem 'capistrano', '~> 3.6.1'
-  gem 'capistrano-rbenv', '~> 2.0.4'
-  gem 'capistrano-rbenv-install', '~> 1.2.0'
-  gem 'capistrano-rails', '~> 1.1'
-  gem 'capistrano-passenger'
-  gem 'capistrano-secrets-yml'
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
 end
+
 gem 'capistrano-rails-collection'
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

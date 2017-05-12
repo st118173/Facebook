@@ -9,9 +9,7 @@
 set :branch, 'master'
 set :rails_env,'production'
 set :deploy_via, :remote_cache
-server '34.210.128.9',
-       user: 'deploy',
-       roles: %w{web app db}
+
 
 role :app, %w{deploy@34.210.128.9}
 role :web, %w{deploy@34.210.128.9}

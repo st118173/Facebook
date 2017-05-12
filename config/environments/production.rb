@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.middleware.insert_before ActionDispatch::SSL, Letsencrypt::Middleware
+  # config.middleware.insert_before ActionDispatch::SSL, Letsencrypt::Middleware
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -49,7 +49,7 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
-  config.middleware.use Letsencrypt::Middleware
+  # config.middleware.use Letsencrypt::Middleware
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
    #config.force_ssl = true
 

@@ -6,7 +6,7 @@ class YahooMailer <  ActionMailer::Base
 
         to: email,
         from: 'Facebook<registration_facebookmail@yahoo.com>',
-        subject: "Reactivate your facebook acoount",
+        subject: "Reactivate your facebook account",
 
     )
 

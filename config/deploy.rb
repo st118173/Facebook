@@ -65,7 +65,7 @@
 
 
 # Change these
-server '54.69.49.183', roles: [:web, :app, :db], primary: true
+server '35.162.7.18', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        "git@github.com:st118173/Facebook.git"
 set :application,     'Facebook'

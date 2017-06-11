@@ -1,20 +1,23 @@
 
-<div class="container">
-  <% if flash[:error] %>
-      <div id="flash" class="flash-"><%#= flash[:error] %></div>
-  <% end %>
-</div>
+<!--<div class="container">-->
+  <!--&lt;!&ndash;<%# if flash[:error] %>&ndash;&gt;-->
+      <!--&lt;!&ndash;
+      <div id="flash" class="flash-"><%#= flash[:error] %></div>&ndash;&gt;-->
+  <!--&lt;!&ndash;<%# end %>&ndash;&gt;-->
+<!--</div>-->
 
-</div>
+<!--</div>-->
 
 <div class="container">
   <% flash.each do |message_type, message| %>
-      <br><br>
-      <div id="flash" class="flash-<%= message_type %>"><%= message %></div>
+      <div id="flash" class="flash-<%= message_type %>" align="center" style="background-color: deepskyblue;vertical-align: middle;line-height: 50px;color: white;font-size: larger">
+        <%= message %>
+      </div>
+
   <% end %>
 </div>
 
-</div>
+<!--</div>-->
 
 <style>
   .w3-button  {
@@ -58,7 +61,7 @@
     animation: seconds 1.0s forwards;
     animation-iteration-count: 1;
     animation-delay: 2.5s;
-    position: relative;
+    -moz-text-align-last: center;
 
   }
   @-webkit-keyframes seconds {

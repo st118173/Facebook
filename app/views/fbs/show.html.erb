@@ -1,7 +1,9 @@
 <div class="container">
   <% flash.each do |message_type, message| %>
-      <br><br>
-      <div id="flash" class="flash-<%= message_type %>"><%= message %></div>
+      <div id="flash" class="flash-<%= message_type %>" align="center" style="background-color: deepskyblue;vertical-align: middle;line-height: 50px;color: white;font-size: larger">
+        <%= message %>
+      </div>
+
   <% end %>
 </div>
 <style>

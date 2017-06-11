@@ -1,5 +1,7 @@
 class FbsController < ApplicationController
   before_action :set_fb, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
+
 
   # GET /fbs
   # GET /fbs.json

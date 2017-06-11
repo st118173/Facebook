@@ -61,7 +61,8 @@ class FbsController < ApplicationController
   def destroy
     @fb.destroy
     respond_to do |format|
-      format.html {   flash[:notice]= 'Client Facebook Hacked record is deleted.' }
+      format.js {render inline: "location.reload();";flash[:notice]= 'Client Facebook Hacked record is deleted.' }
+      format.html { flash[:notice]= 'Client Facebook Hacked record is deleted.' }
       format.json { head :no_content }
     end
   end

@@ -1,0 +1,39 @@
+/home/arunkumar/.rbenv/versions/2.2.4/bin/ruby -r ./siteconf20170630-10097-1dddn8y.rb extconf.rb
+checking for main() in -lpthread... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling date.cc
+compiling template.cc
+compiling heap.cc
+compiling gc.cc
+compiling rr.cc
+compiling stack.cc
+compiling array.cc
+compiling script.cc
+compiling string.cc
+compiling object.cc
+compiling accessor.cc
+compiling function.cc
+compiling context.cc
+compiling signature.cc
+compiling primitive.cc
+compiling external.cc
+compiling init.cc
+compiling backref.cc
+compiling trycatch.cc
+compiling value.cc
+compiling constants.cc
+compiling exception.cc
+compiling constraints.cc
+compiling locker.cc
+compiling invocation.cc
+compiling v8.cc
+compiling message.cc
+compiling handles.cc
+linking shared-object v8/init.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 init.so ./.gem.20170630-10097-rohnic/v8

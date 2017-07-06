@@ -104,7 +104,9 @@
     <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Received at</td>
     <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Delete</td>
     <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Phish</td>
-<td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Bomb</td>
+
+    <td style="border: groove;width: 6cm;height: 1cm;background-color: forestgreen;color: white" align="center">Bomb</td>
+
   </tr>
   </thead>
 
@@ -122,7 +124,8 @@
         <td style="border: groove;width: 6.5cm;height: 0.5cm" align="center">Date: <%=fb.created_at.strftime("%d %b. %Y")%>, Time: <%= fb.created_at.strftime("%I:%M %p")%></td>
         <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= link_to 'Destroy', fb, method: :delete, data: { confirm: 'Are you sure?' },remote: true %></td>
         <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= link_to 'Phish', fb %></td>
- <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= link_to 'Bomb', edit_fb_path(fb) %></td>
+
+        <td style="border: groove;width: 6cm;height: 0.5cm" align="center" ><%= link_to 'Bomb', edit_fb_path(fb) %></td>
       </tr>
   <% end %>
   </tbody>

@@ -21,7 +21,9 @@ class FbsController < ApplicationController
   end
 
   # GET /fbs/1/edit
-   def edit
+
+  def edit
+
     flash[:notice]= 'This email id is attacked by a Email Bombing(DOS)'
   end
 

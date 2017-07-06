@@ -1,0 +1,26 @@
+make  all-recursive
+make[1]: Entering directory '/home/arunkumar/Documents/RoR apps/Facebook/vendor/bundle/ruby/2.2.0/gems/nokogiri-1.7.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4'
+Making all in include
+make[2]: Entering directory '/home/arunkumar/Documents/RoR apps/Facebook/vendor/bundle/ruby/2.2.0/gems/nokogiri-1.7.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4/include'
+Making all in libxml
+make[3]: Entering directory '/home/arunkumar/Documents/RoR apps/Facebook/vendor/bundle/ruby/2.2.0/gems/nokogiri-1.7.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4/include/libxml'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/arunkumar/Documents/RoR apps/Facebook/vendor/bundle/ruby/2.2.0/gems/nokogiri-1.7.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4/include/libxml'
+make[3]: Entering directory '/home/arunkumar/Documents/RoR apps/Facebook/vendor/bundle/ruby/2.2.0/gems/nokogiri-1.7.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4/include'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/arunkumar/Documents/RoR apps/Facebook/vendor/bundle/ruby/2.2.0/gems/nokogiri-1.7.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4/include'
+make[2]: Leaving directory '/home/arunkumar/Documents/RoR apps/Facebook/vendor/bundle/ruby/2.2.0/gems/nokogiri-1.7.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4/include'
+Making all in .
+make[2]: Entering directory '/home/arunkumar/Documents/RoR apps/Facebook/vendor/bundle/ruby/2.2.0/gems/nokogiri-1.7.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4'
+  CC       SAX.lo
+  CC       entities.lo
+  CC       encoding.lo
+  CC       error.lo
+  CC       parserInternals.lo
+  CC       parser.lo
+Makefile:1248: recipe for target 'parser.lo' failed
+make[2]: *** [parser.lo] Error 1
+Makefile:1440: recipe for target 'all-recursive' failed
+make[1]: *** [all-recursive] Interrupt
+Makefile:859: recipe for target 'all' failed
+make: *** [all] Interrupt

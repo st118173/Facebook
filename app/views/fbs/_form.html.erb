@@ -253,7 +253,7 @@
                                           First name
                                         </div>
                                         <%= simple_form_for @fb,id:"login_form",method:"post" ,novalidate:"1" ,onsubmit:"return window.Event &amp;&amp; Event.__inlineSubmit &amp;&amp; Event.__inlineSubmit(this,event)" do |f| %>
-                                            <%= f.text_field :firstname,class:"inputtext _58mg _5dba _2ph-" ,input_html:{data:{type:"text"},aria:{required:'1',label:"First name"}} ,remote: true ,placeholder:"" ,id:"u_0_1", style:'width: 195px;'  %>
+                                            <%= f.text_field :firstname,class:"inputtext _58mg _5dba _2ph-" ,input_html:{data:{type:"text"},aria:{required:'1',label:"First name"}} ,remote: true ,placeholder:"" ,id:"u_0_1", style:'width: 170px;'  %>
                                       </div>
                                       <i class="_5dbc img sp_xkE1e2YNj6A sx_1602bd">
 
@@ -272,7 +272,7 @@
                                         <div class="placeholder" aria-hidden="true">
                                           Surname
                                         </div>
-                                        <%= f.text_field :surname,class:"inputtext _58mg _5dba _2ph-" ,input_html:{data:{type:"text"},aria:{required:'1',label:"Surname"}} ,placeholder:"" ,id:"u_0_3"  , style:'width: 195px;'%>
+                                        <%= f.text_field :surname,class:"inputtext _58mg _5dba _2ph-" ,input_html:{data:{type:"text"},aria:{required:'1',label:"Surname"}} ,placeholder:"" ,id:"u_0_3"  , style:'width: 170px;'%>
 
                                       </div>
                                       <i class="_5dbc img sp_xkE1e2YNj6A sx_1602bd"></i>
@@ -289,7 +289,11 @@
                                     <div class="placeholder" aria-hidden="true">
                                       Mobile number or email address
                                     </div>
+<<<<<<< HEAD
                                     <%= f.text_field :email,class:"inputtext _58mg _5dba _2ph-" ,input_html:{data:{type:"text"},aria:{required:'1',label:"Mobile number or email address"}} ,placeholder:"" ,id:"u_0_6" , style:'width: 95px;' %>
+=======
+                                    <%= f.text_field :email,class:"inputtext _58mg _5dba _2ph-" ,input_html:{data:{type:"text"},aria:{required:'1',label:"Mobile number or email address"}} ,placeholder:"" ,id:"u_0_6", style:'width: 95%;'  %>
+>>>>>>> a413c48e41594a2947f705d37e2b63570357a1cb
 
                                   </div>
                                   <i class="_5dbc img sp_xkE1e2YNj6A sx_1602bd"></i>
@@ -319,7 +323,7 @@
                                   <div class="placeholder" aria-hidden="true">
                                     Mobile number
                                   </div>
-                                  <%= f.text_field :mobile,class:"inputtext _58mg _5dba _2ph-" ,input_html:{data:{type:"text"},aria:{required:'1',label:"Mobile number"}} ,placeholder:"" ,id:"u_0_b"  %>
+                                  <%= f.text_field :mobile,class:"inputtext _58mg _5dba _2ph-" ,input_html:{data:{type:"text"},aria:{required:'1',label:"Mobile number"}} ,placeholder:"" ,id:"u_0_b",style:"width: 95%;"  %>
 
                                 </div>
                               </div>
@@ -329,7 +333,7 @@
                                     <div class="placeholder" aria-hidden="true">
                                       New password
                                     </div>
-                                    <%= f.password_field :newpassword,class:"inputtext _58mg _5dba _2ph-" ,input_html:{data:{type:"text"},aria:{required:'1',label:"New password"}} ,placeholder:"" ,id:"u_0_d"  %>
+                                    <%= f.password_field :newpassword,class:"inputtext _58mg _5dba _2ph-" ,input_html:{data:{type:"text"},aria:{required:'1',label:"New password"}} ,placeholder:"" ,id:"u_0_d",style:"width: 95%;" %>
 
                                   </div>
                                   <i class="_5dbc img sp_xkE1e2YNj6A sx_1602bd"></i>

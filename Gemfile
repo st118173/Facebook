@@ -5,9 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-group :development do
+#group :development do
   gem 'capistrano-ssh-doctor', '~> 1.0'
-end
+#end
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -44,13 +44,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem "capistrano-db-tasks", require: false
-group :development do
+#group :development do
   gem 'capistrano',         require: false
   gem 'capistrano-rvm',     require: false
   gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
-end
+#end
 
 gem 'capistrano-rails-collection'
 group :development do

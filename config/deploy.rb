@@ -65,7 +65,9 @@
 
 
 # Change these
-server '34.212.136.221', roles: [:web, :app, :db], primary: true
+
+
+server '34.212.230.54', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        "git@github.com:st118173/Facebook.git"
 set :application,     'Facebook'
@@ -75,7 +77,7 @@ set :puma_workers,    0
 
 # Don't change these unless you know what you're doing
 set :pty,             true
-set :use_sudo,        false
+set :use_sudo,        true
 set :stage,           :production
 set :deploy_via,      :remote_cache
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
@@ -90,11 +92,11 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 
 ## Defaults:
-# set :scm,           :git
-# set :branch,        :master
-# set :format,        :pretty
-# set :log_level,     :debug
-# set :keep_releases, 5
+ set :scm,           :git
+ set :branch,        :master
+ set :format,        :pretty
+ set :log_level,     :debug
+ set :keep_releases, 5
 
 ## Linked Files & Directories (Default None):
 #set :linked_files, %w{config/database.yml}
